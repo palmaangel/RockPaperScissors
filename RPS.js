@@ -1,4 +1,4 @@
-// const PlayerChoice = prompt("Rock Paper or scissors?:")
+const PlayerChoice = prompt("Rock Paper or scissors?:")
 var computerChoice;
 var random_number= generateRandomNumber(1, 3);
 
@@ -16,5 +16,32 @@ else if (random_number == 2){
 else if (random_number == 3){
     computerChoice = "Scissors";
 }
+
+if(PlayerChoice == computerChoice){
+    console.log("its a tie!")
+}
+else if (PlayerChoice == "rock"){
+    if (computerChoice == "Paper"){ 
+        console.log("You lose!")
+    }else {
+    console.log("You wins!")
+    }
+}
+else if (PlayerChoice == "scissors"){
+    if (computerChoice == "Rock"){
+        console.log("You lose!")
+    }else {
+    console.log("You wins!")
+    }
+}
+else if (PlayerChoice == "paper"){
+    if (computerChoice == "Scissors"){
+        console.log("You lose!")
+    }else {
+    console.log("You wins!")
+    }
+}
+
+
 
 console.log(computerChoice)
