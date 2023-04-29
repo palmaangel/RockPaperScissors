@@ -8,40 +8,39 @@ function generateRandomNumber(min, max) {
 
 
 if (random_number == 1){
-    computerChoice = "Rock";
+    computerChoice = "rock";
 }
 else if (random_number == 2){
-    computerChoice = "Paper";
+    computerChoice = "paper";
 }
 else if (random_number == 3){
-    computerChoice = "Scissors";
+    computerChoice = "scissors";
 }
 
-if(PlayerChoice == computerChoice){
+if(PlayerChoice === computerChoice){
     console.log("its a tie!")
 }
 else if (PlayerChoice == "rock"){
-    if (computerChoice == "Paper"){ 
+    if (computerChoice == "paper"){ 
         console.log("You lose!")
     }else {
     console.log("You wins!")
     }
 }
 else if (PlayerChoice == "scissors"){
-    if (computerChoice == "Rock"){
+    if (computerChoice == "rock"){
         console.log("You lose!")
     }else {
     console.log("You wins!")
     }
 }
 else if (PlayerChoice == "paper"){
-    if (computerChoice == "Scissors"){
+    if (computerChoice == "scissors"){
         console.log("You lose!")
     }else {
     console.log("You wins!")
     }
 }
 
-
-
-console.log(computerChoice)
+console.log(PlayerChoice);
+console.log(computerChoice);
