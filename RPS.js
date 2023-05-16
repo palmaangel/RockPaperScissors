@@ -1,21 +1,31 @@
-//const PlayerChoice = prompt("Rock Paper or scissors?:")
 var PlayerChoice;
 var computerChoice;
-var random_number= generateRandomNumber(1, 3);
 var result;
+var buttonChoice = document.querySelectorAll(".buttonDisplay")
+var computerAnswer;
 
-RockButtonDisplay.onclick = function buttonRock(){
-    PlayerChoice = "rock";
-    console.log(PlayerChoice);
-}
 
-function generateRandomNumber(min, max) {
+buttonChoice.forEach(button => button.addEventListener("click", () => {
+
+
+    PlayerChoice = button.textContent;
+    checkWinner;
+    computerChoice;
+    console.log(computerChoice)
+    document.getElementById("playerChoiceDisplay").innerHTML = PlayerChoice;
+    document.getElementById("computerChoiceDisplay").innerHTML = computerChoice;
+    document.getElementById("resultDisplay").innerHTML = result;
+ 
+}));
+
+function generateRandomNumber() {
     return Math.floor(Math.random() * 3);
 }
-const material = ["rock","paper","scissors"]
-computerChoice = material[random_number]
+var material = ["rock","paper","scissors"];
+consoleChoice = material[computerChoice];
 
-function gameRound(PlayerChoice,computerChoice){
+
+function checkWinner(){
     if(PlayerChoice === computerChoice){
         console.log("its a tie!")
         result = "its a tie!"
@@ -50,10 +60,5 @@ function gameRound(PlayerChoice,computerChoice){
 
         }
     }
-}
-document.getElementById("playerChoiceDisplay").innerHTML = PlayerChoice;
-document.getElementById("computerChoiceDisplay").innerHTML = computerChoice;
-document.getElementById("resultDisplay").innerHTML = result;
 
-console.log(PlayerChoice);
-console.log(computerChoice);
+}
